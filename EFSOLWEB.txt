@@ -1,0 +1,144 @@
+#Conexion a bd H2
+spring.datasource.url = jdbc:h2:mem:EF_exam
+spring.datasource.driverClassName = org.h2.Driver
+spring.datasource.username = sa
+spring.datasource.password = solweb2024
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+spring.jpa.hibernate.ddl-auto=create
+spring.jpa.show-sql: true
+
+<!--mis dependencias-->
+<dependency>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-starter-data-jpa</artifactId>
+</dependency>
+		
+<dependency>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-starter-web</artifactId>
+</dependency>
+		
+<dependency>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-devtools</artifactId>
+	<scope>runtime</scope>
+	<optional>true</optional>
+</dependency>
+
+
+>>>>>>>>Entidades
+@Entity
+public class Producto {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private int id;
+	
+	@Column(length = 50, nullable =false, unique = true, name="PNombre" )
+	private String nombre;
+	private String descripcion;
+	
+	@ManyToOne
+    @JoinColumn(name = "categoria_id")
+	@JsonBackReference
+    private Categoria categoria;
+
+
+
+@Entity
+@Table(name = "categoria")
+public class Categoria {
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private int id;
+	
+	@Column(nullable =false)
+	private String Cnombre;
+	
+	@OneToMany(mappedBy = "categoria", cascade = CascadeType.ALL, orphanRemoval = true)
+	@JsonManagedReference
+	private List<Producto> productos = new ArrayList<>();
+
+
+
+
+>>>>>>> REPOSITORIO
+@Repository
+public interface ProductoRepository extends JpaRepository<Producto, Integer> {
+
+}
+
+
+
+>>>>>>> SERVICIO
+@Service
+public class ProductoServiceImpl {
+	
+	@Autowired
+	ProductoRepository productoRepository;
+	
+	public List<Producto> getProducts(){
+		return productoRepository.findAll();
+	}
+	
+	public Producto getProduct(Integer id) {
+		return productoRepository.findById(id).get();
+	}
+	
+	public Producto saveProduct(Producto producto) {
+		return productoRepository.save(producto);
+	}
+	
+	public void deleteProduct(Integer id) {
+		productoRepository.deleteById(id);
+	}
+}
+
+
+
+>>>>>>> CONTROLADOR
+
+
+@RestController
+public class ProductoController {
+	
+	@Autowired
+	ProductoServiceImpl productoService;
+	
+	@GetMapping("/productos/lista")
+	public List<Producto> listProducts(){
+		return productoService.getProducts();
+	}
+	
+	@PostMapping("/productos/nuevo")
+	public Producto newProduct(@RequestBody Producto producto) {
+		return productoService.saveProduct(producto);
+	}
+	
+	@PutMapping("/productos/cambiar")
+	public ResponseEntity<Producto> updateProduct(@RequestBody Producto producto) {
+		if (producto.getId() == 0) {
+	        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null); 
+	    }
+	    
+	    Producto updatedProduct = productoService.saveProduct(producto); 
+	    return ResponseEntity.ok(updatedProduct);
+	}
+	
+	@DeleteMapping("/productos/{id}")
+	public void removeProduct(@PathVariable Integer id) {
+		productoService.deleteProduct(id);
+	}
+}
+
+
+
+
+
+
+
+
+		
+		
+
+
