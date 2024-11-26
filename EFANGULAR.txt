@@ -1,0 +1,313 @@
+<div class="container">
+  <div class="product-form-container">
+    <form [formGroup]="productForm" class="formulario" (ngSubmit)="onSubmit()">
+      <div>
+        <label for="name">Product Name</label>
+        <input id="name" formControlName="nombre" type="text" />
+        <div
+          *ngIf="
+            productForm.get('nombre')?.invalid &&
+            productForm.get('nombre')?.touched
+          "
+        >
+          <small *ngIf="productForm.get('nombre')?.hasError('required')"
+            >Name is required.</small
+          >
+          <small *ngIf="productForm.get('nombre')?.hasError('maxlength')"
+            >Name must be less than 100 characters.</small
+          >
+        </div>
+      </div>
+
+      <div>
+        <label for="precio">Precio</label>
+        <input id="precio" formControlName="precio" type="number" />
+        <div
+          *ngIf="
+            productForm.get('precio')?.invalid &&
+            productForm.get('precio')?.touched
+          "
+        >
+          <small *ngIf="productForm.get('precio')?.hasError('required')"
+            >Price is required.</small
+          >
+          <small *ngIf="productForm.get('precio')?.hasError('min')"
+            >Price must be greater than 0.</small
+          >
+        </div>
+      </div>
+
+
+      <button type="submit" [disabled]="productForm.invalid">Visualizar</button>
+    </form>
+</div>
+</div>
+
+
+import { CommonModule, NgIf } from '@angular/common';
+import { Component } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Producto } from '../../AModels/producto';
+import { ProductoService } from '../../AService/producto.service';
+import { Router, RouterLink } from '@angular/router';
+
+@Component({
+  selector: 'app-new-product',
+  standalone: true,
+  imports: [ReactiveFormsModule, NgIf, CommonModule, FormsModule],
+  templateUrl: './new-product.component.html',
+  styleUrl: './new-product.component.css',
+})
+export class NewProductComponent {
+  // Creamos un FormGroup para el formulario reactivo
+  productForm: FormGroup;
+
+  product: Producto = new Producto();
+
+  constructor(
+    private productService: ProductoService,
+    private router: Router,
+  ) {
+    // Inicializamos el formulario con FormControls
+    this.productForm = new FormGroup({
+      nombre: new FormControl('', [
+        Validators.required,
+        Validators.maxLength(100),
+      ]),
+      descripcion: new FormControl('', [
+        Validators.required,
+        Validators.maxLength(500),
+      ]),
+      precio: new FormControl('', [Validators.required, Validators.min(0)]),
+      categoria: new FormControl('', [Validators.required]),
+      imagenUrl: new FormControl('', [
+        Validators.required,
+        Validators.pattern('https?://.+'),
+      ]), // Validación para URL
+    });
+  }
+
+  // Método para manejar el envío del formulario
+  onSubmit(): void {
+    if (this.productForm.valid) {
+      this.product = { ...this.productForm.value };
+      console.log(this.product);
+      // Aquí puedes llamar a un servicio para guardar el producto
+    } else {
+      console.log('Formulario no válido');
+    }
+  }
+
+  saveProduct() {
+    if (this.productForm.valid) {
+      // Llamar al servicio para guardar el producto
+      this.productService.saveProduct(this.product).subscribe(
+        (response) => {
+          console.log('Producto guardado correctamente:', response);
+          alert('producto guradado correctamente');
+          this.productForm.reset();
+          this.router.navigate(['/admin']);
+        },
+        (error) => {
+          console.error('Error al guardar el producto:', error);
+        },
+      );
+    } else {
+      console.log('Formulario no válido');
+    }
+  }
+}
+
+
+>>>>>>>>>>>LISTA
+<div class="table-container">
+  <h2>Lista de Productos</h2>
+
+  <!-- Tabla de productos -->
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Product ID</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th>Category</th>
+        <th>Image</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Recorrer los productos y crear una fila por cada uno -->
+      <tr *ngFor="let product of productos">
+        <td>{{ product.productoId }}</td>
+        <td>{{ product.nombre }}</td>
+        <td>{{ product.descripcion }}</td>
+        <td>{{ product.precio }}</td>
+        <td>{{ product.categoria }}</td>
+        <td>
+          <img
+            [src]="product.imagenUrl"
+            alt="{{ product.nombre }}"
+            width="50"
+            height="50"
+          />
+        </td>
+        <td>
+          <!-- Botón para eliminar el producto -->
+          <button (click)="deleteProduct(product.productoId)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+import { Component, OnInit } from '@angular/core';
+import { Producto } from '../../AModels/producto';
+import { FormsModule } from '@angular/forms';
+import { NgFor } from '@angular/common';
+import { ProductoService } from '../../AService/producto.service';
+
+@Component({
+  selector: 'app-product-list',
+  standalone: true,
+  imports: [FormsModule, NgFor],
+  templateUrl: './product-list.component.html',
+  styleUrl: './product-list.component.css',
+})
+export class ProductListComponent {
+  // Lista de productos
+
+  // Asegúrate de que el tipo de productos es correcto
+  productos: Producto[] = []; // Aquí estamos usando Producto en lugar de Producto[] directamente
+
+  constructor(private productoService: ProductoService) {} // El nombre del servicio debe coincidir
+
+  ngOnInit(): void {
+    this.loadProducts(); // Carga los productos al inicio
+  }
+
+  // Método para cargar los productos desde el servicio
+  loadProducts(): void {
+    this.productoService.getProducts().subscribe(
+      (productos) => {
+        this.productos = productos; // Asignamos los productos obtenidos a la variable
+        console.log(this.productos); // Verifica en consola los productos obtenidos
+      },
+      (error) => {
+        console.error('Error al obtener productos:', error); // Manejo de errores
+      },
+    );
+  }
+
+  // Método para eliminar un producto de la lista
+  deleteProduct(productoId: number): void {
+    console.log('Elemento antes de eliminar:', productoId); // Imprime el id del producto a eliminar
+    this.productoService.deleteProduct(productoId).subscribe(
+      (response) => {
+        console.log('Producto eliminado exitosamente', response);
+        this.loadProducts(); // Recarga los productos después de la eliminación
+      },
+      (error) => {
+        console.error('Error al eliminar el producto', error); // Manejo de errores
+      },
+    );
+  }
+}
+
+
+
+>>>>>
+export class Producto {
+  nombre: string;
+  descripcion: string;
+  precio: number;
+  categoria: string;
+  imagenUrl: string;
+  productoId: number;
+
+  constructor(
+    productoId: number = 0,
+    nombre: string = '',
+    descripcion: string = '',
+    precio: number = 0,
+    categoria: string = '',
+    imagenUrl: string = '',
+  ) {
+    this.productoId = productoId;
+    this.nombre = nombre;
+    this.descripcion = descripcion;
+    this.precio = precio;
+    this.categoria = categoria;
+    this.imagenUrl = imagenUrl;
+  }
+}
+
+
+
+>>>> service
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { HttpHeaders } from '@angular/common/http';
+
+@Injectable({
+  providedIn: 'root',
+})
+export class ProductoService {
+  private urlAPI = 'http://localhost:8080/product';
+
+  constructor(private http: HttpClient) {}
+
+  public getProducts(): Observable<any> {
+    return this.http.get<any>(`${this.urlAPI}/all`);
+  }
+
+  // Método para guardar el producto
+  saveProduct(product: any): Observable<any> {
+    const body = product;
+
+    // Recuperar el token de localStorage
+    const token = localStorage.getItem('authToken');
+
+    // Crear el encabezado Authorization
+    const headers = new HttpHeaders({
+      Authorization: `Bearer ${token}`,
+      'Content-Type': 'application/json',
+    });
+
+    console.log('token: ', token);
+    console.log(headers);
+    // Realizar el POST request
+    return this.http.post(`${this.urlAPI}/new`, body, { headers });
+  }
+
+  deleteProduct(productId: number): Observable<any> {
+    const url = `${this.urlAPI}/${productId}`;
+
+    const token = localStorage.getItem('authToken');
+    const options = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`,
+      }),
+    };
+
+    return this.http.delete(url, options);
+  }
+}
+>>>>>>>
+provideHttpClient()
+
+{ path: '', redirectTo: '/home', pathMatch: 'full' },
+{ path: 'login', component: LoginComponent },
+
+
+
+
+
+
+
+
+
