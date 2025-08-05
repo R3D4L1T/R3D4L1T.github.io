@@ -2,58 +2,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>http://R3D4L1T.github.io/</loc>
-         <lastmod>2025-07-19</lastmod>
+         <lastmod>2025-08-05</lastmod>
     </url>
     <url>
          <loc>http://R3D4L1T.github.io/blog/</loc>
-         <lastmod>2025-07-19</lastmod>
+         <lastmod>2025-08-05</lastmod>
     </url>
     <url>
          <loc>http://R3D4L1T.github.io/computerNetworks/computerNetworks/</loc>
-         <lastmod>2025-07-19</lastmod>
+         <lastmod>2025-08-05</lastmod>
     </url>
     <url>
          <loc>http://R3D4L1T.github.io/cybersecurity/cybersecurity/</loc>
-         <lastmod>2025-07-19</lastmod>
+         <lastmod>2025-08-05</lastmod>
     </url>
     <url>
          <loc>http://R3D4L1T.github.io/cybersecurity/tools/burpsuite/</loc>
-         <lastmod>2025-07-19</lastmod>
+         <lastmod>2025-08-05</lastmod>
+    </url>
+    <url>
+         <loc>http://R3D4L1T.github.io/cybersecurity/tools/nmap/</loc>
+         <lastmod>2025-08-05</lastmod>
     </url>
     <url>
          <loc>http://R3D4L1T.github.io/hardware/customKeyboard/</loc>
-         <lastmod>2025-07-19</lastmod>
+         <lastmod>2025-08-05</lastmod>
     </url>
     <url>
          <loc>http://R3D4L1T.github.io/hardware/hardware/</loc>
-         <lastmod>2025-07-19</lastmod>
+         <lastmod>2025-08-05</lastmod>
     </url>
     <url>
          <loc>http://R3D4L1T.github.io/hardware/pendrive/</loc>
-         <lastmod>2025-07-19</lastmod>
+         <lastmod>2025-08-05</lastmod>
     </url>
     <url>
          <loc>http://R3D4L1T.github.io/software/software/</loc>
-         <lastmod>2025-07-19</lastmod>
+         <lastmod>2025-08-05</lastmod>
     </url>
     <url>
          <loc>http://R3D4L1T.github.io/software/tools/hotkeysConfig/</loc>
-         <lastmod>2025-07-19</lastmod>
+         <lastmod>2025-08-05</lastmod>
     </url>
     <url>
          <loc>http://R3D4L1T.github.io/software/tools/obsidian/</loc>
-         <lastmod>2025-07-19</lastmod>
+         <lastmod>2025-08-05</lastmod>
     </url>
     <url>
          <loc>http://R3D4L1T.github.io/software/tools/vim/</loc>
-         <lastmod>2025-07-19</lastmod>
+         <lastmod>2025-08-05</lastmod>
     </url>
     <url>
          <loc>http://R3D4L1T.github.io/software/tools/windowsEnviroment/</loc>
-         <lastmod>2025-07-19</lastmod>
+         <lastmod>2025-08-05</lastmod>
     </url>
     <url>
          <loc>http://R3D4L1T.github.io/software/tools/zenBrowser/</loc>
-         <lastmod>2025-07-19</lastmod>
+         <lastmod>2025-08-05</lastmod>
     </url>
 </urlset>
