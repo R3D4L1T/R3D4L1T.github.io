@@ -2,194 +2,202 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>http://R3D4L1T.github.io/</loc>
-         <lastmod>2025-08-09</lastmod>
+         <lastmod>2025-08-10</lastmod>
     </url>
     <url>
          <loc>http://R3D4L1T.github.io/blog/</loc>
-         <lastmod>2025-08-09</lastmod>
+         <lastmod>2025-08-10</lastmod>
     </url>
     <url>
          <loc>http://R3D4L1T.github.io/cybersecurity/cybersecurity/</loc>
-         <lastmod>2025-08-09</lastmod>
+         <lastmod>2025-08-10</lastmod>
     </url>
     <url>
          <loc>http://R3D4L1T.github.io/cybersecurity/hacking/enumeration/cms/</loc>
-         <lastmod>2025-08-09</lastmod>
+         <lastmod>2025-08-10</lastmod>
     </url>
     <url>
          <loc>http://R3D4L1T.github.io/cybersecurity/hacking/enumeration/emails/</loc>
-         <lastmod>2025-08-09</lastmod>
+         <lastmod>2025-08-10</lastmod>
     </url>
     <url>
          <loc>http://R3D4L1T.github.io/cybersecurity/hacking/enumeration/ftp/</loc>
-         <lastmod>2025-08-09</lastmod>
+         <lastmod>2025-08-10</lastmod>
     </url>
     <url>
          <loc>http://R3D4L1T.github.io/cybersecurity/hacking/enumeration/localNetwork/</loc>
-         <lastmod>2025-08-09</lastmod>
+         <lastmod>2025-08-10</lastmod>
     </url>
     <url>
          <loc>http://R3D4L1T.github.io/cybersecurity/hacking/enumeration/os/</loc>
-         <lastmod>2025-08-09</lastmod>
+         <lastmod>2025-08-10</lastmod>
     </url>
     <url>
          <loc>http://R3D4L1T.github.io/cybersecurity/hacking/enumeration/ports/</loc>
-         <lastmod>2025-08-09</lastmod>
+         <lastmod>2025-08-10</lastmod>
     </url>
     <url>
          <loc>http://R3D4L1T.github.io/cybersecurity/hacking/enumeration/rpcbin/</loc>
-         <lastmod>2025-08-09</lastmod>
+         <lastmod>2025-08-10</lastmod>
     </url>
     <url>
          <loc>http://R3D4L1T.github.io/cybersecurity/hacking/enumeration/securityBreaches/</loc>
-         <lastmod>2025-08-09</lastmod>
+         <lastmod>2025-08-10</lastmod>
     </url>
     <url>
          <loc>http://R3D4L1T.github.io/cybersecurity/hacking/enumeration/smb/</loc>
-         <lastmod>2025-08-09</lastmod>
+         <lastmod>2025-08-10</lastmod>
     </url>
     <url>
          <loc>http://R3D4L1T.github.io/cybersecurity/hacking/enumeration/ssh/</loc>
-         <lastmod>2025-08-09</lastmod>
+         <lastmod>2025-08-10</lastmod>
     </url>
     <url>
          <loc>http://R3D4L1T.github.io/cybersecurity/hacking/enumeration/technologies/</loc>
-         <lastmod>2025-08-09</lastmod>
+         <lastmod>2025-08-10</lastmod>
     </url>
     <url>
          <loc>http://R3D4L1T.github.io/cybersecurity/hacking/enumeration/webServices/</loc>
-         <lastmod>2025-08-09</lastmod>
+         <lastmod>2025-08-10</lastmod>
     </url>
     <url>
          <loc>http://R3D4L1T.github.io/cybersecurity/hacking/osint/googleDorks/</loc>
-         <lastmod>2025-08-09</lastmod>
+         <lastmod>2025-08-10</lastmod>
     </url>
     <url>
          <loc>http://R3D4L1T.github.io/cybersecurity/hacking/osint/images/</loc>
-         <lastmod>2025-08-09</lastmod>
+         <lastmod>2025-08-10</lastmod>
     </url>
     <url>
          <loc>http://R3D4L1T.github.io/cybersecurity/tools/burpsuite/</loc>
-         <lastmod>2025-08-09</lastmod>
+         <lastmod>2025-08-10</lastmod>
+    </url>
+    <url>
+         <loc>http://R3D4L1T.github.io/cybersecurity/tools/gobuster/</loc>
+         <lastmod>2025-08-10</lastmod>
     </url>
     <url>
          <loc>http://R3D4L1T.github.io/cybersecurity/tools/nmap/</loc>
-         <lastmod>2025-08-09</lastmod>
+         <lastmod>2025-08-10</lastmod>
+    </url>
+    <url>
+         <loc>http://R3D4L1T.github.io/cybersecurity/tools/wfuzz/</loc>
+         <lastmod>2025-08-10</lastmod>
     </url>
     <url>
          <loc>http://R3D4L1T.github.io/cybersecurity/tools/wordlists/</loc>
-         <lastmod>2025-08-09</lastmod>
+         <lastmod>2025-08-10</lastmod>
     </url>
     <url>
          <loc>http://R3D4L1T.github.io/hardware/customKeyboard/</loc>
-         <lastmod>2025-08-09</lastmod>
+         <lastmod>2025-08-10</lastmod>
     </url>
     <url>
          <loc>http://R3D4L1T.github.io/hardware/hardware/</loc>
-         <lastmod>2025-08-09</lastmod>
+         <lastmod>2025-08-10</lastmod>
     </url>
     <url>
          <loc>http://R3D4L1T.github.io/hardware/pendrive/</loc>
-         <lastmod>2025-08-09</lastmod>
+         <lastmod>2025-08-10</lastmod>
     </url>
     <url>
          <loc>http://R3D4L1T.github.io/software/software/</loc>
-         <lastmod>2025-08-09</lastmod>
+         <lastmod>2025-08-10</lastmod>
     </url>
     <url>
          <loc>http://R3D4L1T.github.io/software/linux/bspwm/</loc>
-         <lastmod>2025-08-09</lastmod>
+         <lastmod>2025-08-10</lastmod>
     </url>
     <url>
          <loc>http://R3D4L1T.github.io/software/linux/cronJobs/</loc>
-         <lastmod>2025-08-09</lastmod>
+         <lastmod>2025-08-10</lastmod>
     </url>
     <url>
          <loc>http://R3D4L1T.github.io/software/linux/curl/</loc>
-         <lastmod>2025-08-09</lastmod>
+         <lastmod>2025-08-10</lastmod>
     </url>
     <url>
          <loc>http://R3D4L1T.github.io/software/linux/directories/</loc>
-         <lastmod>2025-08-09</lastmod>
+         <lastmod>2025-08-10</lastmod>
     </url>
     <url>
          <loc>http://R3D4L1T.github.io/software/linux/fonts/</loc>
-         <lastmod>2025-08-09</lastmod>
+         <lastmod>2025-08-10</lastmod>
     </url>
     <url>
          <loc>http://R3D4L1T.github.io/software/linux/kitty/</loc>
-         <lastmod>2025-08-09</lastmod>
+         <lastmod>2025-08-10</lastmod>
     </url>
     <url>
          <loc>http://R3D4L1T.github.io/software/linux/permissions/</loc>
-         <lastmod>2025-08-09</lastmod>
+         <lastmod>2025-08-10</lastmod>
     </url>
     <url>
          <loc>http://R3D4L1T.github.io/software/linux/picom/</loc>
-         <lastmod>2025-08-09</lastmod>
+         <lastmod>2025-08-10</lastmod>
     </url>
     <url>
          <loc>http://R3D4L1T.github.io/software/linux/polybar/</loc>
-         <lastmod>2025-08-09</lastmod>
+         <lastmod>2025-08-10</lastmod>
     </url>
     <url>
          <loc>http://R3D4L1T.github.io/software/linux/zsh/</loc>
-         <lastmod>2025-08-09</lastmod>
+         <lastmod>2025-08-10</lastmod>
     </url>
     <url>
          <loc>http://R3D4L1T.github.io/software/programming/bash/bashBanners/</loc>
-         <lastmod>2025-08-09</lastmod>
+         <lastmod>2025-08-10</lastmod>
     </url>
     <url>
          <loc>http://R3D4L1T.github.io/software/programming/bash/bashSyntax/</loc>
-         <lastmod>2025-08-09</lastmod>
+         <lastmod>2025-08-10</lastmod>
     </url>
     <url>
          <loc>http://R3D4L1T.github.io/software/programming/python/pythonFiles/</loc>
-         <lastmod>2025-08-09</lastmod>
+         <lastmod>2025-08-10</lastmod>
     </url>
     <url>
          <loc>http://R3D4L1T.github.io/software/programming/python/pythonModules/</loc>
-         <lastmod>2025-08-09</lastmod>
+         <lastmod>2025-08-10</lastmod>
     </url>
     <url>
          <loc>http://R3D4L1T.github.io/software/programming/python/pythonOOP/</loc>
-         <lastmod>2025-08-09</lastmod>
+         <lastmod>2025-08-10</lastmod>
     </url>
     <url>
          <loc>http://R3D4L1T.github.io/software/programming/python/pythonStrings/</loc>
-         <lastmod>2025-08-09</lastmod>
+         <lastmod>2025-08-10</lastmod>
     </url>
     <url>
          <loc>http://R3D4L1T.github.io/software/programming/python/pythonSyntax/</loc>
-         <lastmod>2025-08-09</lastmod>
+         <lastmod>2025-08-10</lastmod>
     </url>
     <url>
          <loc>http://R3D4L1T.github.io/software/programming/python/pythonTemplates/</loc>
-         <lastmod>2025-08-09</lastmod>
+         <lastmod>2025-08-10</lastmod>
     </url>
     <url>
          <loc>http://R3D4L1T.github.io/software/tools/git/</loc>
-         <lastmod>2025-08-09</lastmod>
+         <lastmod>2025-08-10</lastmod>
     </url>
     <url>
          <loc>http://R3D4L1T.github.io/software/tools/hotkeysConfig/</loc>
-         <lastmod>2025-08-09</lastmod>
+         <lastmod>2025-08-10</lastmod>
     </url>
     <url>
          <loc>http://R3D4L1T.github.io/software/tools/obsidian/</loc>
-         <lastmod>2025-08-09</lastmod>
+         <lastmod>2025-08-10</lastmod>
     </url>
     <url>
          <loc>http://R3D4L1T.github.io/software/tools/vim/</loc>
-         <lastmod>2025-08-09</lastmod>
+         <lastmod>2025-08-10</lastmod>
     </url>
     <url>
          <loc>http://R3D4L1T.github.io/software/tools/windowsEnviroment/</loc>
-         <lastmod>2025-08-09</lastmod>
+         <lastmod>2025-08-10</lastmod>
     </url>
     <url>
          <loc>http://R3D4L1T.github.io/software/tools/zenBrowser/</loc>
-         <lastmod>2025-08-09</lastmod>
+         <lastmod>2025-08-10</lastmod>
     </url>
 </urlset>
